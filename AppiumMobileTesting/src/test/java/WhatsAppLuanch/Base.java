@@ -24,6 +24,7 @@ public class Base {
 		cab.setCapability("udid", pro.getProperty("udid"));
 		cab.setCapability("platformName", pro.getProperty("platformName"));
 		cab.setCapability("platformVersion", pro.getProperty("platformVersion"));
+		System.out.println("added cabs");
 
 	}
 
