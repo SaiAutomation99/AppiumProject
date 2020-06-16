@@ -17,9 +17,9 @@ public class FirstAppiumProgram {
 
 	public static void main(String[] args) throws Exception{
 		
-		InputStream input=new FileInputStream("C:\\Users\\Sai\\eclipse-workspace\\AppiumMobileTesting\\src\\main\\resources\\Properties\\android.properties");
-		Properties pro=new Properties();
-		pro.load(input);
+		//InputStream input=new FileInputStream("C:\\Users\\Sai\\eclipse-workspace\\AppiumMobileTesting\\src\\main\\resources\\Properties\\android.properties");
+		//Properties pro=new Properties();
+		//pro.load(input);
 		//QDT4C18117013130
 		
 		DesiredCapabilities cab=new DesiredCapabilities();
@@ -28,12 +28,9 @@ public class FirstAppiumProgram {
 		cab.setCapability("platformName", "Android");
 		cab.setCapability("platformVersion", "9");
 		cab.setCapability("appPackage", "com.android.calculator2");
-		//cab.setCapability("appPackage",pro.getProperty("calender"));
 
 		cab.setCapability("appActivity", "com.android.calculator2.Calculator");
-		//cab.setCapability("appActivity",pro.getProperty("activities"));
 
-		//System.out.println(pro.getProperty("activities"));
 		URL url=new URL("http://127.0.0.1:4723/wd/hub");
 		
 		 driver=new AppiumDriver<MobileElement>(url,cab);
